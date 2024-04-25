@@ -1,0 +1,987 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+
+.dashboard {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width:500px){
+
+    .dashboard{
+        display: grid;
+        width: 90vw ;
+        margin: 10px auto;
+        height: 150vh;
+        grid-template-columns: 100% ;
+        grid-template-rows: repeat(10,10%);
+
+    }
+    .dashboard .nav{
+        grid-column: span 1;
+    }
+    .dashboard .page{
+        grid-column: span 1;
+        grid-row: span 5;
+        background-color: #f3f3f3;
+    }
+    .dashboard .footer{
+        grid-row: span 1;
+    }
+    .dashboard .profile{
+        grid-row: span 3;
+    }
+
+    .dashboard .nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .dashboard .nav .logo{
+        height: 30%;
+    }
+    .dashboard .nav ul{
+        width: 65%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100%;
+        justify-content: space-evenly;
+    }
+    .dashboard .nav ul li{
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        width: 30%;
+        height: 40%;
+        padding: 10px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .dashboard .nav ul li i{
+        font-size: 20px;
+        color: #4b4453;
+    }
+    .dashboard .nav ul li a{
+        font-size: 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #b0a8b9;
+    }
+    .dashboard .nav .logo {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: space-between;
+    }
+    .dashboard .nav .logo i{
+        font-size: 30px;
+        color: #0081cf;
+    }
+    .dashboard .nav .logo p{
+        font-size: 30px;
+        color: #0081cf;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .dashboard .nav .input{
+        display: none;
+    }
+    /*-----------------------------------------------------*/
+
+    .dashboard .page{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .dashboard .page .search{
+        width: 90%;
+        height: 40%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .dashboard .page .search  .title{
+        background-color: #fcf8ff;
+        border-radius: 20px;
+        width: 90%;
+        height: 25%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .dashboard .page .search  .title h5{
+        align-self: center;
+        margin-left: 10px;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .dashboard .page .search  .title .text{
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .dashboard .page .search  .title .text i{
+        margin-left: 20px;
+        margin-right: 10px;
+        color: #0284cf;
+        font-weight: 900;
+        font-size: 25px;
+    }
+    .dashboard .page .search  .title .text p{
+        margin-left: 20px;
+        font-size: 15px;
+        font-weight: 900;
+    }
+    .dashboard .page .search  .welcome{
+        background-color: #dbdad9;
+        height: 60%;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 10px;
+    }
+    .dashboard .page .search  .welcome .text{
+        width: 50%;
+        height: 80%;
+    }
+    .dashboard .page .search  .welcome .text h3{
+        margin: 10px 10px;
+        font-weight: 400;
+        font-size: 30px;
+        color: rgb(24, 23, 23);
+    }
+    .dashboard .page .search  .welcome .text h3::first-letter{
+        font-size: 30px;
+    }
+    .dashboard .page .search  .welcome .text p{
+        width: 90%;
+        margin: 0 15px;
+        font-size: 15px;
+        color: #58595a;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    }
+    .dashboard .page .search  .welcome .img{
+        width: 50%;
+        height: 80%;
+    }
+
+
+    .dashboard .page .charts{
+        height: 50%;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .dashboard .page .charts .one{
+        height: 90%;
+        width: 40%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+    .dashboard .page .charts .one ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        border-radius: 20px;
+    }
+    .dashboard .page .charts .one ul li{
+        width: 95%;
+        height: 13%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .dashboard .page .charts .one ul li p{
+        margin: 0 5px;
+        font-weight: 500;
+        font-size: 13px;
+    }
+    .dashboard .page .charts .one ul  .s{
+        background-color: rgb(233, 227, 227);
+        width: 40%;
+        height: 15%;
+        position: relative;
+        margin-right: 25px;
+    }
+    .dashboard .page .charts .one ul  .s::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background-color: red;
+        border-radius: 20px;
+    }
+    .dashboard .page .charts .one ul  .s::after{
+        content: "50%";
+        position: absolute;
+        right: -30px;
+        top: -5px;
+        border-radius: 20px;
+        color: red;
+        font-weight: 900;
+        font-size: 13px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .dashboard .page .charts .one ul li:first-child p{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .dashboard .page .charts .one ul li:first-child span{
+        font-weight: 400;
+        font-size: 15px;
+        margin-top: 10px;
+        margin-right: 15px;
+        position: relative;
+    }
+    .dashboard .page .charts .one ul li:first-child span::before{
+        content: "";
+        position: absolute;
+        right: -20px;
+        top: 5px;
+        background-color: red;
+        width: 5px;
+        height:5px ;
+        border-radius: 50%;
+        animation-name: a;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+    }
+    @keyframes a {
+        25% {
+            width: 5px;
+            height:5px ;    
+        }
+        50% {
+            width: 7px;
+            height:7px ;    
+        }
+        75% {
+            width: 5px;
+            height:5px ;    
+        }
+        100% {
+            width: 7px;
+            height:7px ;    
+        }
+    }
+    .dashboard .page .charts .one ul li:not(:first-child){
+        border-bottom: red solid 2px;
+    }
+    .dashboard .page .charts .one ul li:last-child{
+        border-bottom: transparent solid 2px;
+
+    }
+
+    .dashboard .page .charts .two{
+        height: 90%;
+        width: 50%;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .dashboard .page .charts .two .text{
+        width: 90%;
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .dashboard .page .charts .two .text p:last-child{
+        font-size: 12px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .dashboard .page .charts .two .text p:first-child{
+        font-size: 14px;
+        font-weight: 600;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .dashboard .page .charts .two .w{
+        width: 90%;
+        height: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly   ;
+
+    }
+    .dashboard .page .charts .two .w li{
+        margin-top: 10px;
+        font-weight: 300;
+        font-size: 15px;
+        color: rgb(209, 208, 208);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .dashboard .page .charts .two .ww{
+        width: 90%;
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+
+
+    /*---------------------------------------*/
+    .dashboard .footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        background-color: #f5f6f7;
+
+    }
+    .dashboard .footer .title{
+        width: 85%;
+        background-color: #e6e8e9;
+        height: 25%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    .dashboard .footer .title .ii{
+        position: relative;
+    }
+    .dashboard .footer .title .ii::before{
+        content: "";
+        position: absolute;
+        height: 8px;
+        border: 9px black solid;
+        right: -25px;
+        border-color: transparent transparent black transparent;
+        transform: rotate(270deg);
+        top: -5px;
+        animation-name: jj ;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+    }
+    @keyframes jj {
+        20% {
+            right: -25px;
+            top: -5px;
+        }
+        40% {
+            right: -30px;
+            top: -5px;
+        }
+        60% {
+            right: -25px;
+            top: -5px;
+        }
+        80% {
+            right: -30px;
+            top: -5px;
+        }
+        100% {
+            right: -25px;
+            top: -5px;
+        }
+    }
+
+    .dashboard .footer .icons{
+        width: 85%;
+        height:60%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .dashboard .footer .icons .one,
+                               .two,
+                               .three{
+        width: 30%;
+        height: 90%;
+        background-color: #8d8794;
+        border-radius: 20px;
+    }
+
+    .dashboard .footer .icons .one{
+        background-color: #4d4cac;
+    }
+    .dashboard .footer .icons .two{
+        background-color: #9698d6;
+    }
+    .dashboard .footer .icons .three{
+        background-color: #ff808b;
+    }
+
+
+    .dashboard .footer .icons .one,
+    .dashboard .footer .icons .two,
+    .dashboard .footer .icons .three{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+    .dashboard .footer .icons .one p,
+    .dashboard .footer .icons .two p,
+    .dashboard .footer .icons .three p                          {
+        height: 60%;
+        width: 30%;
+        background-color: #0284cf;
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .dashboard .footer .icons .one p{
+        background-color: #5a5ab2 ;
+    }
+    .dashboard .footer .icons .two p{
+        background-color:#a4a6db ;
+    }
+    .dashboard .footer .icons .three p{
+        background-color: #ff919b;
+    }
+
+    .dashboard .footer .icons .one .text,
+    .dashboard .footer .icons .two .text,
+    .dashboard .footer .icons .three .text{
+        width: 60%;
+    }
+    .dashboard .footer .icons .one .text h6,
+    .dashboard .footer .icons .two .text h6,
+    .dashboard .footer .icons .three .text h6{
+        font-weight: 500;
+        font-size: 15px;
+        text-align: left;
+    }
+    .dashboard .footer .icons .one  p,
+    .dashboard .footer .icons .two  p,
+    .dashboard .footer .icons .three  p{
+        color: white;
+        font-weight: 700;
+    }
+    .dashboard .footer .icons .one .text .aa,
+    .dashboard .footer .icons .two .text .aa,
+    .dashboard .footer .icons .three .text .aa{
+        color: rgb(255, 255, 255) ;
+        margin-top: 5px;
+    }
+    .dashboard .footer .icons .one .text .a,
+    .dashboard .footer .icons .two .text .a,
+    .dashboard .footer .icons .three .text .a{
+        color: rgb(236, 232, 232) ;
+        margin-top: 5px;
+        font-size: 13px;
+    }
+/*---------------------------------------*/
+
+    .dashboard .profile{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+    }
+    .dashboard .profile .op{
+        width: 50%;
+        height: 100%;
+        display: flex ;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+    }
+
+    .dashboard .profile .op .photo{
+        background-color: #f5f5f5;
+        width: 90%;
+        height: 50%;
+        display: flex ;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative; 
+        border-radius: 20px;
+    }
+    .dashboard .profile .op .photo p:first-child{
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .dashboard .profile .op .photo i{
+        font-size: 70px;
+        border: 1px solid black;
+        height: 45%;
+        width: 40%;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+    .dashboard .profile .op .learns{
+        height: 40%;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .dashboard .profile .op .learns .shape1,
+    .dashboard .profile .op .learns .shape2{
+        height: 90%;
+        width: 40%;
+        border-radius: 10px;
+        background-color: #dfdfe0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+    }
+
+
+
+
+    .dashboard .profile .op .learns .shape1 p:first-child,
+    .dashboard .profile .op .learns .shape2 p:first-child{
+        width: 60%;
+        height: 30%;
+        background-color: #298cce;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+    }
+    .dashboard .profile .op .learns .shape1 .textw,
+    .dashboard .profile .op .learns .shape2 .textw{
+        width: 60%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        
+    }
+
+    .dashboard .profile .op .learns .shape1 .textw span,
+    .dashboard .profile .op .learns .shape2 .textw span{
+        display: block;
+        width: 90%;
+        height: 7%;
+        background-color: white;
+        border-radius: 10px;
+        position: relative;
+        margin-left: 2px;
+    }
+    .dashboard .profile .op .learns .shape1 .textw span::before,
+    .dashboard .profile .op .learns .shape2 .textw span::before{
+        content: "";
+        position: absolute;
+        background-color: black;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    .dashboard .profile .op .learns .shape1 .textw p,
+    .dashboard .profile .op .learns .shape2 .textw p{
+        color: rgb(34, 32, 32);
+        font-size: 10px;
+    }
+    .dashboard .profile .op .learns .shape1 .textw h5,
+    .dashboard .profile .op .learns .shape2 .textw h5{
+        color: rgb(8, 8, 8);
+        font-weight: 800;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+
+
+    .dashboard .profile .opp{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        border-radius: 20px;
+        align-items: center;
+    }
+
+    .dashboard .profile .opp ul{
+        width: 90%;
+        height: 90%;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        overflow: auto;
+        border-radius: 20px;
+    }
+    .dashboard .profile .opp ul li{
+            width: 80%;
+            height: 14%;
+            border-radius: 10px;
+            margin: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+    }
+    .dashboard .profile .opp ul li .textopp{
+        width: 60%;
+    }
+    .dashboard .profile .opp ul li .textopp p:first-child{
+        font-size: 17px;
+        font-weight: 700;
+    }
+    .dashboard .profile .opp ul li h4{
+        background-color: #4d4cac;
+        height: 70%;
+        width: 20%;
+        border-radius: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+@media (min-width: 800px) {
+    .dashboard .profile .op .photo{
+        height: 70%;
+    }
+    .dashboard .profile .op .learns{
+        height: 25%;
+        width: 90%;
+    }
+    .dashboard .profile .op .learns .shape1,
+    .dashboard .profile .op .learns .shape2{
+        width: 45%;
+        height: 40%;
+        flex-direction: row;
+        padding: 2px;
+    }
+    .dashboard .profile .op .learns .shape1 p:first-child,
+    .dashboard .profile .op .learns .shape2 p:first-child{
+        width: 20%;
+        height: 80%;
+    }
+    .dashboard .profile .opp ul {
+        background-color: #f1f1f1;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .dashboard .profile .opp ul li{
+        width: 40%;
+        height: 10%;
+    }
+
+}
+
+@media (min-width:970px){
+    
+        .dashboard{
+            grid-template-columns: 10% 90% ;
+            grid-template-rows: repeat(10,10%);
+    
+        }
+
+
+    .dashboard .nav{
+        position: absolute;
+        left: -30px;
+        top: 350px;
+        width: 5%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border-radius: 20px;
+        background-color: #5df3dc;
+    }
+    .dashboard .page{
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: 6;
+        grid-column-end: 3;
+    }
+    .dashboard .footer{
+        grid-column: span 2;
+    }
+    .dashboard .profile{
+        grid-row-start: 6;
+        grid-column-start: 1;
+        grid-row-end: 10;
+        grid-column-end:3;
+    }
+    .dashboard .nav .logo {
+        height: 30%;
+        width: 100%;
+    }
+    .dashboard .nav .logo p{
+        font-size: 20px;
+        width: 20%;
+        text-align: center;
+        color: #0284cf;
+    }
+    .dashboard .nav .logo i{
+        font-size: 30px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+        color: #047cc2;
+    }
+    .dashboard .nav ul{
+        height: 70%;
+        width: 100%;
+    }
+    .dashboard .nav ul li{
+        height: 10%;
+        width: 100%;
+        justify-content: center;
+        border-radius: 20px;
+    }
+    .dashboard .nav ul li a{
+        display:none;
+        width: 80%;
+        height: 1%;
+    }
+    .dashboard .nav ul li:hover{
+        transition: 0.5s;
+        background-color: #f3f3f3;
+    }
+    .dashboard .nav .input{
+        display: none;
+    }
+
+}
+
+
+
+@media (min-width:1200px){
+
+    .dashboard{
+        grid-template-columns: 15% repeat(2,minmax(20%,40%)) 20% ;
+        height: 90vh;
+    }
+
+    .dashboard .nav{
+        position: relative;
+        display: block;
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 11 ;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        background-color: transparent;
+    }
+    .dashboard .page{
+        grid-column: span 2;
+        grid-row: span 8;
+    }
+    .dashboard .footer{
+        grid-row: span 2;
+    }
+    .dashboard .profile{
+        grid-row-start: 1;
+        grid-column-start: 4 ;
+        grid-column-end: 5 ;
+        grid-row-end: 11 ;
+    }
+
+    .dashboard .nav .logo{
+        height: 20%;
+    }
+    .dashboard .nav {
+        justify-content: space-evenly;
+    }
+    .dashboard .nav ul{
+        height: 50%;
+        justify-content: space-around;
+    }
+    .dashboard .nav ul li {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 80%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .dashboard .nav ul li a{
+        display: block;
+        text-align: center;
+        height: 100%;
+        width: 50%;
+        font-weight: 700;
+        font-size: 15px;
+        align-self: center;
+        text-align: left;
+        color: #a8a1b1;
+    }
+    .dashboard .nav ul li i{
+        font-size: 20px;
+        width: 50%;
+        height: 100%;
+        text-align: center;
+    }
+    .dashboard .nav ul li:hover{
+        background-color: #0081cf;
+    }
+    .dashboard .nav .logo i{
+        color: #0284cf;
+    } 
+    .dashboard .nav .logo p{
+        width: 100%;
+    } 
+
+    .dashboard .nav .input{
+        height: 18%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+        width: 70%;
+        background-color: #f5f5fb;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .dashboard .nav .input p{
+        width: 80%;
+        height: 20%;
+        align-self: flex-end;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #909394;
+        display: flex;
+        text-align: center;
+    }
+    .dashboard .nav .input input{
+        width: 80%;
+        background-color: #5e81f4;
+        height: 25%;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+        text-align: center;
+        color:white ;
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+
+    .dashboard .profile .op{
+        width: 90%;
+        height: 60%;
+    }
+    .dashboard .profile .opp{
+        width: 90%;
+        height: 40%;
+    }
+
+    .dashboard .profile .op .photo{
+        height: 60%;
+    }
+    .dashboard .profile .op .photo i{
+        width: 40%;
+        height: 30%;
+    }
+    .dashboard .profile .op .learns{
+        height: 30%;
+        width: 90%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .dashboard .profile .op .learns .shape1,
+    .dashboard .profile .op .learns .shape2{
+        width: 100%;
+        height: 40%;
+        flex-direction: row;
+        padding: 2px;
+        background-color: rgb(252, 252, 252);
+    }
+    .dashboard .profile .op .learns .shape1 p:first-child,
+    .dashboard .profile .op .learns .shape2 p:first-child{
+        width: 20%;
+        height: 80%;
+    }
+
+    .dashboard .profile .op .learns .shape1 .textw,
+    .dashboard .profile .op .learns .shape2 .textw{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+    .dashboard .profile .opp ul {
+    }
+    .dashboard .profile .opp ul li{
+        width: 80%;
+        height: 15%;
+    }
+}
